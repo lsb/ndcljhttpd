@@ -2,6 +2,7 @@
   (:require [ndcljhttpd.handler :as handler]
             [luminus.repl-server :as repl]
             [luminus.http-server :as http]
+            [luminus-migrations.core :as migrations]
             [ndcljhttpd.config :refer [env]]
             [clojure.tools.cli :refer [parse-opts]]
             [clojure.tools.logging :as log]
@@ -12,6 +13,9 @@
 (def cli-options
   [["-p" "--port PORT" "Port number"
     :parse-fn #(Integer/parseInt %)]])
+
+(mount/defstate log
+                :start (logger/init (:log-config env)))
 
 (mount/defstate ^{:on-reload :noop}
                 http-server
@@ -44,8 +48,14 @@
                         mount/start-with-args
                         :started)]
     (log/info component "started"))
-  (logger/init (:log-config env))
   (.addShutdownHook (Runtime/getRuntime) (Thread. stop-app)))
 
 (defn -main [& args]
-  (start-app args))
+  (cond
+    (some #{"migrate" "rollback"} args)
+    (do
+      (mount/start #'lumnew1.config/env)
+      (migrations/migrate args (env :database-url))
+      (System/exit 0))
+    :else
+    (start-app args)))

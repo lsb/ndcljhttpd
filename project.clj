@@ -22,9 +22,13 @@
                  [cprop "0.1.7"]
                  [org.clojure/tools.cli "0.3.4"]
                  [luminus-nrepl "0.1.4"]
+                 [luminus-migrations "0.1.6"]
+                 [conman "0.5.7"]
+                 [org.xerial/sqlite-jdbc "3.8.11.2"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [luminus-immutant "0.2.0"]]
 
+  :git-dependencies [["https://github.com/lsb/ndclj.git"]]
   :min-lein-version "2.0.0"
 
   :jvm-opts ["-server" "-Dconf=.lein-env"]
@@ -32,8 +36,11 @@
   :resource-paths ["resources"]
 
   :main ndcljhttpd.core
+  :migratus {:store :database :db ~(get (System/getenv) "DATABASE_URL")}
 
-  :plugins [[lein-cprop "1.0.1"]]
+  :plugins [[lein-cprop "1.0.1"]
+            [migratus-lein "0.3.1"]
+            [lein-git-deps "0.0.2"]]
   :target-path "target/%s/"
   :profiles
   {:uberjar {:omit-source true
