@@ -1,0 +1,25 @@
+<i><b>NoDictionaries is<br>a new way to read<br><a href="/latin">dozens of Latin authors</a> and<br><a href="/novifex">any other Latin you type in</a>:</b><a href='/catullus/carmina/85' style="display:none"><br>Go straight to Catullus 85 &raquo;</a></i><br>
+<div id="ancillary-slider">
+<div class="vocab-slider-description">Click any word (like Arma) to see<br>all of its possible meanings.<br><br>Click and drag to adjust vocab:</div><div id="ancillary-vocab-slider" class="vocab-slider"><div id="ancillary-vocab-handle" class="vocab-handle"></div></div>
+</div>
+<div id='frontpage'>{% safe %}{{ OdiEtAmo }}{% endsafe %}</div>
+<div style="padding-top: 2em; padding-bottom: 4em; font-style: italic">
+Go straight to
+<a href="/caesar/de-bello-gallico-1/1">Caesar&rsquo;s Gallic War</a> &middot;
+<a href="/catullus/carmina/85">Catullus</a> &middot;
+<a href="/eutropius/breviarium-8/1">Eutropius</a>
+<br>
+<a href="/horace/odes-3/30">Horace&rsquo;s Odes</a> &middot;
+<a href="/suetonius/divus-julius/33">Suetonius&rsquo;s Divus Julius</a> &middot;
+<a href="/vergil/aeneid-1/1-7">Vergil&rsquo;s Aeneid</a>
+<br>
+or check out <a href="/latin">the dozens of Latin authors</a> or <a href="/novifex">type your own Latin in</a>
+</div>
+<div class="about">
+  <div><b>Need help? Check out <a href='http://bestlatin.blogspot.com'>Laura Gibbs&rsquo;</a> <a href='http://bestlatin.blogspot.com/2009/06/nodictionariescom.html'>fantastic overview of NoDictionaries</a>.</b><br><br></div>
+
+  <div><b>A bit further detail</b></div>
+  <div>I&rsquo;ve just graduated from <a href="http://www.google.com/search?q=classics+department+tufts&amp;btnI=I'm+Feeling+Lucky">grad school</a>, and this was my Master&rsquo;s project.  It helped me read much faster, and it also helped me have more fun reading, and less time flipping through a dictionary.  Enjoy!  Please <a href="mailto:lee@nodictionaries.com">let me know</a> what you think.<br><br></div>
+
+  <div><b>Much thanks to those who have shaped the development</b> including Prof Susan Setnik, Prof Gregory Crane, Prof Betsey Halpern, Prof Steven Hirsch, and all of the undergrad and grad student usability testers, including the Fall 2008 Latin 3 class, especially Kevin Hillburn, EJ Testa, Emeka Nwabuzor, Ryan Zuckman, and Cori Russo, Alan Mui, Dan Zhen, Kwaku Osei-Tutu, and Ian Drummond, Molly Gayton, Leonora Mahler, Zachary Fenno, and many more.  A further deep debt of gratitude to William Whitaker, for his <a href="http://users.erols.com/whitaker/words.htm">Words</a>, and to <a href="http://thelatinlibrary.com">The Latin Library</a>.  Icons of monitor, projector, and printer copyright the Oxygen Project, licensed under the GPL.</div>
+</div>

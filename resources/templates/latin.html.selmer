@@ -1,0 +1,41 @@
+<div class='enticing'><span>
+Try out <a href="/vergil/aeneid-1/1-7">Vergil&rsquo;s Aeneid</a><br>
+or <a href="/caesar/de-bello-gallico-1/1">Caesar&rsquo;s De Bello Gallico</a><br>
+or <a href="/suetonius/divus-julius/32">Suetonius&rsquo;s account of crossing the Rubicon</a><br>
+or <a href="cicero/catilinarian-1/1">Cicero&rsquo;s First Oration against Catiline</a>.<br><br>
+Dozens of authors&rsquo; texts below, or<br>
+<a href="/novifex">add interlinear vocab to any other Latin text</a>.
+</span></div>
+
+<div class='enticing' style="background-color: #ccffcc; width: 100%">
+<div>Search through all Latin texts for the words</div>
+<input id='autocomplete' name='q' type='text' style="width: 95%"/>
+<span id='spinner' style="display:none">
+  <img alt='Working...' src='/spinner.gif' />
+</span>
+<div class='autocomplete' id='autocomplete-choices'></div>
+</div>
+
+<div>
+{% for book in books %}
+<div><span class="book-author">{{ book.author }}</span> <a href="{{ book.link }}">{{ book.title }}</a></div>
+{% endfor %}
+</div>
+
+<!--
+
+
+MC.fetch("latin-page", 1.hour) {
+B.new.div {|b|
+  Book.all(:group => "urlauthor, rtrim(urltitle,'1234567890')", :order => "urlauthor, urltitle", :conditions => {:is_visible => true}).each {|book|
+    b.div {
+      b.span(book.author, :class => 'book-author')
+      b.a(book.title.sub(/ \d+$/,''), :href => book.covolumes.first.link)
+    }
+  }
+}
+}
+
+>
+
+<div style="margin-top: 1em; font-size: 75%"><a href='/reading-statistics'>Here&rsquo;s something cool: see how much people have been reading on NoDictionaries this past month</a></div>

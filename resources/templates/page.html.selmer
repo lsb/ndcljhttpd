@@ -1,0 +1,461 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="description" content="{{ page_description }}">
+    <title>{{ window_title }}</title>
+
+
+<!-- what kind of powers do you have?  do you use them for good, or for awesome? -->
+
+
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/fonts/fonts-min.css">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/2.6.0/build/grids/grids-min.css">
+    <link rel="icon" type="image/png" href="/favicon.ico">
+<style type="text/css">
+#vocab-amount    .lemma {display: none}
+#vocab-amount.v1 .lemma.v1 {display: block}
+#vocab-amount.v4 .lemma.v1 {display: block}
+#vocab-amount.v4 .lemma.v2 {display: block}
+#vocab-amount.v4 .lemma.v3 {display: block}
+#vocab-amount.v4 .lemma.v4 {display: block}
+#vocab-amount.v9 .lemma.v1 {display: block}
+#vocab-amount.v9 .lemma.v2 {display: block}
+#vocab-amount.v9 .lemma.v3 {display: block}
+#vocab-amount.v9 .lemma.v4 {display: block}
+#vocab-amount.v9 .lemma.v5 {display: block}
+#vocab-amount.v9 .lemma.v6 {display: block}
+#vocab-amount.v9 .lemma.v7 {display: block}
+#vocab-amount.v9 .lemma.v8 {display: block}
+#vocab-amount.v9 .lemma.v9 {display: block}
+#vocab-amount.v10 .lemma.v1 {display: block}
+#vocab-amount.v10 .lemma.v2 {display: block}
+#vocab-amount.v10 .lemma.v3 {display: block}
+#vocab-amount.v10 .lemma.v4 {display: block}
+#vocab-amount.v10 .lemma.v5 {display: block}
+#vocab-amount.v10 .lemma.v6 {display: block}
+#vocab-amount.v10 .lemma.v7 {display: block}
+#vocab-amount.v10 .lemma.v8 {display: block}
+#vocab-amount.v10 .lemma.v9 {display: block}
+#vocab-amount.v10 .lemma.v10 {display: block}
+body { margin: 0em; padding: 0em; background-color: #FFFFEE; }
+p { margin: 0em; text-align: left; }
+div.maindiv { font-size: 150%; font-family: georgia; background-color: #FFFFEE; color: #333333; padding: 1px; position: relative; }
+#doc { width: 45em; padding-left: 1em; padding-right: 1em}
+#doc3 { padding-left: 1em; padding-right: 1em }
+#titular { font-family: georgia; padding-top: 1em}
+#customized-box { font-family: verdana; background-color: #cce8ff; position: absolute; top: 0px; right: 0px; font-size: 75%; padding: 0.5em; z-index: 999; width: 20em }
+#login-status {padding-bottom: 1em; padding-top: 1em}
+#customize {border-top: 1px dashed white; padding-top: 1em}
+h1 { font-family: georgia; font-size: 150% }
+h2 { font-family: georgia; font-size: 150% }
+.yui-u { height: 100% }
+.vocab-handle { background-color: transparent; border-color: #333333 transparent transparent transparent; border-style: solid; border-width: 1em; cursor: col-resize; height: 0px; position: absolute; width: 0px; }
+.vocab-slider { background-color: #444444; height: 2px; margin: 0px 0px 1px 0px; position: relative; width: 20em }
+#native-vocab-slider { width: 20em }
+#ancillary-slider > div { margin-right: 0px; margin-left: auto; text-align: right }
+#ancillary-slider .vocab-slider-description { font-style: italic }
+#ancillary-slider .vocab-slider { width: 14em}
+span.i { visibility: hidden; line-height: 70%; white-space: nowrap }
+#principal-parts.pfalse .parts { display: none }
+#principal-parts.ptrue .parts { display: inline }
+
+#text-notes.pfalse .interlinear-note { display: none }
+#text-notes.ptrue .interlinear-note { display: block }
+.interlinear-note-add {display: none}
+
+.lemma { line-height: 70%; color: #669965 }
+.lemma .gloss { font-size: 70%; }
+.lemma i { font-weight: bold; padding-right: 0.5em }
+.lemma i .parts { font-weight: normal }
+.logo { color: #669966; }
+.logo > a:link { color: #669966; }
+.logo > a:visited { color: #669966; }
+.date { color: #999999 }
+.nav { font-weight: bold; font-size: 150%; padding-bottom: 0.5em; padding-top: 0.5em; margin-bottom: 1.5em; margin-top: 1.5em; border-bottom: 1px solid #eeeeee; border-top: 1px solid #eeeeee; }
+a:link { color: #0066cc }
+a:visited { color: #0066cc }
+.subpassage-line-text span.word { color: #663300; cursor: pointer; text-decoration: underline }
+.noticeable { text-align: right; background-color: #660000; color: #ff9933; font-family: verdana, sans-serif; position: fixed; bottom: 0em; right: 0em; padding: 0.5em }
+.noticeable #dialog { text-align: left; position: fixed; left: 0em; bottom: 0em; width: 100%; padding: 0.5em }
+.noticeable input { background-color: #ffaa44; }
+#fbunit { width: 6em }
+.about { font-size: 100%; color: #666666 }
+#aufin { font-size: 75%; text-align: center }
+input { font-family: georgia }
+textarea { font-family: georgia }
+button { font-family: verdana }
+.book-author { margin-right: 0.5em }
+#top-nav { font-size: 75%; margin-bottom: 1em }
+#top-nav .menu { margin-bottom: 0.5em; line-height: 175%; width: 60% }
+#top-nav a { padding: 0.25em; }
+#top-nav a:link { color: #6699CC }
+#top-nav a:visited { color: #6699D0 }
+#top-nav a.co.current {background-color: #ffff33; }
+#top-nav a:hover { color: #3366CC; background-color: #ffcc00; }
+.passage-title {margin-bottom: 1em}
+#bottom-internav {margin-top: 3em}
+.nqlink {margin-top: 3em; margin-bottom: 1em}
+#text form { margin-top: 1em; margin-bottom: 1em }
+.enticing { margin-bottom: 1.5em; margin-top: 1.5em; padding-bottom: 0.5em; padding-top: 0.5em; padding-left: 0.5em; background-color: #ffff99; color: #000000; width: 60% }
+
+input#autocomplete { width: 30em }
+div.autocomplete {
+  position:absolute;
+  background-color:white;
+  border:1px solid #888;
+  margin:0;
+  padding:0;
+}
+div.autocomplete ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+}
+div.autocomplete ul li.selected { background-color: #FFCCBB;}
+div.autocomplete ul li {
+  list-style-type:none;
+  display:block;
+  margin:0;
+  padding:2px;
+  cursor:pointer;
+  overflow: hidden;
+  font-size: 75%;
+}
+
+div.autocomplete ul li .special { text-decoration: underline }
+div.autocomplete ul li b { line-height: 1.25 }
+
+.twhighlight { background-color: #f0f000 }
+
+.vocab-bucket { padding-top: 1em; padding-bottom: 1em }
+.vocab-bucket .number { font-weight: bold }
+.vocab-bucket .des table { width: 100% }
+.vocab-bucket .des table td.latin { width: 40% }
+.vocab-bucket .des table td.english { width: 60% }
+.passage-selection .excerpt { font-size: 75%; font-style: italic }
+
+.novifex-save-as { background-color: #FFFFBB; margin-bottom: 1em; padding: 0.5em }
+.hover-parent .hover-child { visibility: hidden }
+.hover-parent:hover .hover-child { visibility: visible }
+.hover-parent:hover { background-color: #ddffdd }
+.hunny { display: none }
+
+table, tbody, tfoot, thead, tr, th, td {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+font-weight: inherit;
+font-style: inherit;
+font-size: 100%;
+font-family: inherit;
+vertical-align: baseline;
+}
+table { border-collapse: separate; border-spacing: 0; }
+
+.interlinear-note-text, .interlinear-note-add-text { font-size: 70%; }
+#frontpage .interlinear-note { display: none }
+#frontpage .interlinear-note-text { display: none }
+#frontpage .interlinear-note-add { display: none } 
+#frontpage .interlinear-note-add-text { display: none }
+.lh0 { line-height: 70% }
+.wide-note-voting {font-size: 75%; padding-right: 1em; text-align: center}
+.wide-note-voting a:link, .wide-note-voting a:visited {text-decoration: none; color: #CCCCCC}
+.wide-note-voting a.active-vote:link { color: #FF3333 }
+.wide-note-text .byline {font-size: 75%}
+.wide-note-text .reply {font-size: 75%}
+.wide-note { padding-bottom: 1em }
+.note-top-text {padding: 0.5em 0em; border-color: white; border-width: 2px 0px; border-style: solid;}
+.note-top-text .wide-note {padding-top: 1em; padding-bottom: 0em}
+.note-back-link { margin-bottom: 0.5em; opacity: 0.4; font-style: italic }
+form.add-note textarea {width: 50%}
+h1 a {padding-right: 0.25em}
+h1 a:link {color: #669966; }
+h1 a:visited { color: #669966; }
+h1 a.faded:link {color: #99CC99}
+h1 a.faded:visited {color: #99CC99}
+h1 a.faded:hover {color: #88BB88}
+h1 i a {font-size: 60%}
+
+#display-options {float: right;}
+#display-options img {border: none}
+#display-options a {margin-left: 0.5em}
+
+#user-metrics th { cursor: pointer; color: #0066cc; }
+#user-metrics tr.roweven { background-color: #ffffff } 
+
+.subpassage-guts {margin-bottom: 0.5em}
+
+.verification { color: #66CC00; margin-top: 2em; margin-bottom: 1em }
+
+.nobr {white-space: nowrap}
+
+span.gloss .english, span.gloss .french, span.gloss .italian, span.gloss .german, span.gloss .spanish { display: none }
+#definition-language.english span.gloss .english, #definition-language.french span.gloss .french, #definition-language.italian span.gloss .italian, #definition-language.german span.gloss .german, #definition-language.spanish span.gloss .spanish { display: inline }
+
+strong { color: black }
+
+body.high-contrast {background-color: #FFFFFF}
+body.high-contrast div.maindiv { background-color: #FFFFFF; color: #000000 }
+body.high-contrast .lemma { color: #666666; page-break-before: avoid }
+body.high-contrast .logo { color: #000000 }
+body.high-contrast .logo > a:link { color: #000000 }
+body.high-contrast .logo > a:visited { color: #000000 }
+body.high-contrast .date { color: #808080 }
+body.high-contrast span.word { color: #000000; text-decoration: none }
+body.high-contrast a:link { color: #000000; text-decoration: none }
+body.high-contrast #top-nav a.co.current {background-color: #cccccc; }
+body.high-contrast #top-nav a:link {color: #666666 }
+body.high-contrast #top-nav a:visited {color: #666666 }
+
+
+body.clean-page .noticeable { display: none }
+body.clean-page #top-nav { display: none }
+body.clean-page .passage-title { visibility: hidden }
+body.clean-page .subpassage-line { page-break-inside: avoid }
+body.clean-page #bottom-internav { display: none }
+body.clean-page .nqlink { display: none }
+body.clean-page form { display: none }
+body.clean-page .unprintworthy {display: none}
+body.clean-page .vocab-bucket { page-break-before: always }
+body.clean-page #display-options {display: inline}
+body.clean-page .subpassage-line-text a:link { color: #000000 }
+</style>
+<style type="text/css" media="print">
+#customized-box { display: none }
+#doc { width: 100%; padding: 0em }
+#doc3 { width: 100%; padding: 0em }
+</style>
+<body class="yui-skin-sam">
+<div id="doc{% if not no_text_page %}3{% endif %}" class="maindiv">
+  <div id="titular">
+    <h1 class='logo'>
+      <a name='top' href="/">NoDictionaries</a>&nbsp;{{ author }}&nbsp;<br>{{ title }}
+    </h1>
+  </div>
+  <div id="text"><div id="vocab-amount" class="v{% if slider_value > 3 %}10{% else %}{{ slider_value * slider_value }}{% endif %}"><div id="principal-parts" class="p{% if principal_parts %}true{% else %}false{% endif %}"><div id="text-notes" class="p{% if text_notes %}true{% else %}false{% endif %}"><div id="definition-language" class="{{ language }}">
+  {% if blue_box %}
+  <div id="customized-box"><div id="login-status" class="unprintworthy">{{ login_string }}</div><div id="customize" style="display: none">
+      <p id="vocab-slider-description" class="unprintworthy">Click any word in the text to see<br>all the words it could come from.<br><br>Click and drag to adjust vocab:</p><div id="vocab-slider" class="vocab-slider unprintworthy"><div id="vocab-handle" class="vocab-handle"></div></div><input type="range" id="native-vocab-slider" style="display:none" min="0" max="4" value="{{ slider_value }}"><br>
+      <div class="unprintworthy">
+	<select id='lang-dropdown'>
+	  <option value="english"{% ifequal language "english" %} selected{% endif %}>English</option>
+	  <option value="german"{% ifequal language "german" %} selected{% endif %}>Deutsch</option>
+	  <option value="italian"{% ifequal language "italian" %} selected{% endif %}>Italiano</option>
+	  <option value="french"{% ifequal language "french" %} selected{% endif %}>Fran&ccedil;ais</option>
+	  <option value="spanish"{% ifequal language "spanish" %} select{% endif %}>Espa&ntilde;ol</option>
+	</select>
+      </div>
+      <div class="unprintworthy"><input type='checkbox' id='word-root-xbox'/><label id="word-root-description" for="word-root-xbox">Show all principal parts</label></div>
+      <div class="unprintworthy"><input type='checkbox' id='notes-xbox'/><label id="notes-description" for="notes-xbox">Show text notes</label></div>
+      <button id='fixanydefn' class="unprintworthy" onclick="debugging=true; $('onfixing').show(); showAddNotes;">Fix definitions</button>
+      <span id="display-options">
+	<span class="screen" style="cursor: pointer" onclick="document.body.className=''; return false;" title="Mid-contrast, for screen reading"><img src="/monitor.png" alt="Screen monitor styling"></span>
+	<span class="projector" style="cursor: pointer" onclick="document.body.className='high-contrast'; return false;" title="High contrast, for a projector"><img src="/projector.png" alt="Projector styling"></span>
+	<span class="printer" style="cursor: pointer" onclick="document.body.className='high-contrast clean-page'; return false;" title="High contrast with a clean page, for printing"><img src="/printer.png" alt="Print styling"></span>
+      </span>
+      <span id="onfixing" style="display:none" class="unprintworthy"><br>&nbsp;<br>Click a word in the text, and you'll see<br>a checkmark next to each possible definition.<br><br>Click the check next to the best match.<br><br>If you accidentally click a wrong definition,<br>just reclick the right one, no problem.<br><br>Thanks for helping make texts better.</span><br>
+    </div></div>
+  {% end %}
+{% safe %}{% text %}{% endsafe %}
+
+  </div></div></div></div></div>
+<p id='aufin'><br>&nbsp;<br><span onclick="alert(eval(prompt('repl')))">&copy;</span> 2008-2013 NoDictionaries.com.  Happy reading.</p>
+</div>
+  <div id="fbunit" class="noticeable unprintworthy">
+    <div id="dialog" style="display: none">
+      <span id="boxbox" style="display:none">
+	<button onclick="new Ajax.Request('/fieldreport',{method: 'get', parameters: {text: $F('fb'), address: $F('epistlecc')}}); $('boxbox').hide(); $('thanks').show(); (function(){$('fbunit').morph({width: '6em'}); $('thanks').hide(); $('fbstart').setStyle({visibility: ''});}).delay(5);">Report</button> that 
+	<input type="text" id="fb" onmouseover="this.focus()">. Optionally: my email address is
+	<input type="text" id="epistlecc" onmouseover="this.focus()">.
+      </span>
+      <span id="thanks" style="display:none">Thanks very much.  You can also email, if you like: lee@nodictionaries.com</span>
+    </div>
+    <button id='fbstart' onclick="$('fbstart').setStyle({visibility: 'hidden'}); $('fbunit').morph({width: '100%'});(function(){$('dialog','boxbox').invoke('show');$('fb').focus();$('fb').value='';}).delay(1)">feedback</button>
+  </div>
+<script type='text/javascript' src="/proto_scripttouch_scroll.js"></script>
+<script type="text/javascript">
+
+var debugging = false;
+
+document.observe("dom:loaded", function() {
+  $('fbunit').setStyle({width: '6em'});
+  {% if blue_box %}{% if not no_text_page %}$("customize").show(){% endif %}{% endif %}
+  {% if blue_box %}
+  smile = ":)"
+  //window.Modernizr = {inputtypes: {}}
+  window.Modernizr=function(a,b,c){function x(){e.inputtypes=function(a){for(var d=0,e,g,h,i=a.length;d<i;d++)k.setAttribute("type",g=a[d]),e=k.type!=="text",e&&(k.value=smile,k.style.cssText="position:absolute;visibility:hidden;",/^range$/.test(g)&&k.style.WebkitAppearance!==c?(f.appendChild(k),h=b.defaultView,e=h.getComputedStyle&&h.getComputedStyle(k,null).WebkitAppearance!=="textfield"&&k.offsetHeight!==0,f.removeChild(k)):/^(search|tel)$/.test(g)||(/^(url|email)$/.test(g)?e=k.checkValidity&&k.checkValidity()===!1:/^color$/.test(g)?(f.appendChild(k),f.offsetWidth,e=k.value!=smile,f.removeChild(k)):e=k.value!=smile)),n[a[d]]=!!e;return n}("search tel url email datetime date month week time datetime-local number range color".split(" "))}function w(a,b){return!!~(""+a).indexOf(b)}function v(a,b){return typeof a===b}function u(a,b){return t(prefixes.join(a+";")+(b||""))}function t(a){j.cssText=a}var d="2.0",e={},f=b.documentElement,g=b.head||b.getElementsByTagName("head")[0],h="modernizr",i=b.createElement(h),j=i.style,k=b.createElement("input"),l=Object.prototype.toString,m={},n={},o={},p=[],q,r={}.hasOwnProperty,s;!v(r,c)&&!v(r.call,c)?s=function(a,b){return r.call(a,b)}:s=function(a,b){return b in a&&v(a.constructor.prototype[b],c)};for(var y in m)s(m,y)&&(q=y.toLowerCase(),e[q]=m[y](),p.push((e[q]?"":"no-")+q));e.input||x(),t(""),i=k=null,e._version=d;return e}(window,window.document);
+  if(Modernizr.inputtypes.range) {
+    $('vocab-slider').hide();
+    var nvs = 'native-vocab-slider';
+    $(nvs).show();
+    $(nvs).observe('change', function() {
+      var newcname = 'v' + Math.min($F(nvs)*$F(nvs), 10);
+      if($('vocab-amount').className != newcname) { $('vocab-amount').className = newcname };
+    });
+    $(nvs).observe('mouseup', function() { pingback('/record-interaction/slider-change/' + $F(nvs)) } );
+    $(nvs).observe('touchend', function() { pingback('/record-interaction/slider-change/' + $F(nvs)) } );
+  } else {
+    slider = new Control.Slider($('vocab-handle'),
+                                $('vocab-slider'),
+                                {range: $R(0,4),
+                                 values: $R(0,4),
+                                 sliderValue: {{ slider_value }},
+                                 onSlide: function(value) {
+                                   var newcname = 'v' + Math.min(value*value, 10);
+                                   if ($('vocab-amount').className != newcname) { $('vocab-amount').className = newcname };
+                                 }, onChange: function(value) {
+                                   pingback('/record-interaction/slider-change/'+value)
+                                 }
+                                });
+  }
+  var wrx = $('word-root-xbox');
+  var wrd = $('word-root-description');
+  wrx.checked = {% if principal_parts %}true{% else %}false{% endif %};
+  wrx.observe('change', function() { $('principal-parts').className = 'p' + wrx.checked; pingback('/record-interaction/principal-parts/'+wrx.checked); wrx.blur() });
+  var ldd = $('lang-dropdown');
+  ldd.observe('change', function() { $("definition-language").className = ldd.select('option').find(function(o){ return o.selected }).value; pingback('/record-interaction/language/'+$('definition-language').className); });
+  var notesxbox = $('notes-xbox');
+  notesxbox.checked = {% if text_notes %}true{% else %}false{% endif %};
+  notesxbox.observe('change', function() { $('text-notes').className = 'p' + notesxbox.checked; pingback('/record-interaction/text-notes/'+notesxbox.checked); notesxbox.blur() });
+  // $('top-nav') && $('top-nav').setOpacity('0.75')
+  {% endif %}
+
+  if ($('autocomplete')) { new Ajax.Autocompleter('autocomplete','autocomplete-choices','/latin/fts', {indicator: 'spinner', frequency: 0.2, minChars: 3, method: 'get', afterUpdateElement: function(input, li) { window.location = li.id }}); }
+  if (window.location.hash.match('highlight')) {
+    window.location.hash.match(/highlight(-\d+)+/)[0].scan(/\d+/, function(i) { $('tw'+i).addClassName('twhighlight') })
+  }
+  var mouseX, mouseY;
+  document.observe("mouseover", function(event) { mouseY = event.pointerY(); mouseX = event.pointerX(); });
+
+  var subpassageLines = $$("div.subpassage-line-text");
+  watchfulEye = true;
+  new PeriodicalExecuter(function(){
+    var viz = $R(-5, document.viewport.getHeight()-15);
+    if (!watchfulEye) return;
+    new Ajax.Request('/record-interaction/scroll-into-view', {parameters:
+      {bodyHeight: $(document.body).getHeight(),
+       viewportHeight: document.viewport.getHeight(),
+       topScrollOffset: document.viewport.getScrollOffsets().top,
+       mouseX: mouseX,
+       mouseY: mouseY,
+       url: window.location.href,
+       visibleTWIDs: subpassageLines.findAll(function(d){return viz.include(d.viewportOffset().top)}).map(function(d){return d.select('span.word').pluck('id')}).flatten().join('')
+      }});
+   }, 10);
+
+{% safe %}{{ javascript }}{% endsafe %}
+
+   if (window.location.hash.match('keep-editing')) { $('fixanydefn').click() }
+});
+
+function showAddNotes() { $$('.interlinear-note-add').invoke('setStyle',{'display': 'inherit'}); }
+
+function vocabThoroughCorrection() {
+  showAddNotes;
+  var f = new Element('form', {method: 'post', action: '/superpowers/add-lemmatization-and-maybe-dictionary-entry'});
+  f.setStyle({position: 'fixed', width: '100%', top: 0});
+  f.insert(new Element('input', {type: 'text', name: 'twid', id: 'twid', readOnly: true, value: 'text word id'}));
+  f.insert(new Element('input', {type: 'text', name: 'displayword', id: 'displayword', value: 'display word'}));
+  f.insert(new Element('input', {type: 'text', name: 'word', id: 'word', value: 'word'}));
+  f.insert(new Element('br'));
+  f.insert(new Element('input', {type: 'text', name: 'q', id: 'iautocomplete', title: 'dictionary lookup via autocomplete', className: 'autocomplete'}));
+  f.insert(new Element('input', {type: 'hidden', name: 'ajax', value: 'ajax!'}));
+  f.insert(new Element('br'));
+  f.insert(new Element('div', {className: 'autocomplete', id: 'dautocomplete'}));
+  var despan = new Element('span');
+  despan.setStyle({paddingLeft: '0.5em', paddingRight: '0.5em'});
+  despan.insert(new Element('input', {type: 'text', name: 'head', title: 'headword'}));
+  despan.insert(new Element('input', {type: 'text', name: 'tail', title: 'remaining principal parts'}));
+  despan.insert(new Element('input', {type: 'text', name: 'definition', title: 'definition'}));
+  despan.insert(new Element('input', {type: 'hidden', name: 'global_popularity', value: 337, title: 'global popularity per 10k words (leave as is)'}));
+  f.insert(despan);
+  f.insert(new Element('br'));
+  f.insert(new Element('input', {type: 'submit', value: 'Add'}));
+  $(document.body).insert(f);
+  new Ajax.Autocompleter($('iautocomplete'), $('dautocomplete'), '/superpowers/inspect-dictionary', {frequency: 0.1});
+  f.onsubmit = function() {
+    f.request({onFailure: function(){alert('Could not add')},
+               onComplete: function() {f.enable()},
+               onCreate: function() {f.disable()},
+               onSuccess: function(){location.reload()}});
+    return false;};
+  var oldwv = window.wordvocab;
+  window.wordvocab = function(selector) {
+    $('displayword').value = $(selector).innerHTML;
+    $('twid').value = selector.replace(/[^0-9]/g,'');
+    var lemmatizable_word = $(selector).innerHTML.toLowerCase().replace(/[^a-z]/g, '').replace(/j/g,'i').replace(/v/g,'u');
+    $('word').value = lemmatizable_word; oldwv(selector);};
+  debugging = true;
+  $$('a').reject(function(a) { return a.href.match(/[#(]/) }).each(function(a) { a.href += '#keep-editing' });
+  location.hash = 'keep-editing';
+}
+
+function attractivePrinting() {
+  watchfulEye = false;
+  $$('#display-options a.printer')[0].onclick();
+  $('customized-box', 'titular', 'aufin').invoke('hide');
+  $$('.passage-title').invoke("setStyle", "visibility: visible");
+  $$('div.passage-guts').each(function(dpg) {
+    dpg.select('.subpassage-line').inject(96, function(currHeight, elem) {
+      var dh = elem.getHeight();
+      var totalHeight = currHeight + dh;
+      var pageBreak = totalHeight > (10 * 96);
+      if (pageBreak) { elem.insert({before: "<br>"}).insert({before: new Element('div', {'style': "visibility: visible; text-align: center; font-weight: bold; color: #999999; font-style: italic; page-break-before: always; margin-bottom: 0.5in", 'class': "passage-title" }).insert(dpg.select('.passage-title b')[0].innerHTML)}); }
+      return (pageBreak ? 96 : totalHeight);
+    });
+  });
+}
+
+var openWords = []
+
+function pingback(url) { new Ajax.Request(url) }
+function wordvocab(css) {
+  var glosses = $$('.'+css);
+  var pingbackurl = ''
+  if (true) { //glosses.length == 1) {
+//    glosses[0].highlight({'endcolor': '#ffffee'});
+//    pingbackurl = '/record-interaction/click-mono/'+css
+//  } else {
+    glosses.each(function(gloss) {
+      var allVisible = gloss.style.display == 'block';
+      var fixItLink = new Element('a', {'class': 'fixit', href: 'javascript:;', style: 'left-margin: 1em'}).update('&#10003;').observe('click', function() {
+                        pingback('/debug/' + gloss.readAttribute('id'));
+                        $$('.'+css).invoke('removeClassName', "v[^ ]+");
+                        gloss.addClassName('v1').highlight({'endcolor': '#ffffee'});
+                        wordvocab.defer(css);
+                      });
+      if (allVisible) {
+        gloss.style.display = '';
+        gloss.select('.fixit').invoke('remove');
+        pingbackurl = '/record-interaction/close/'+css;
+      } else {
+        gloss.style.display = 'block';
+        gloss.highlight({'endcolor': window.wordvocabHighlight || "#ffffee"});
+        if(debugging) { gloss.select('.gloss')[0].appendChild(fixItLink); }
+        pingbackurl = '/record-interaction/open/'+css;
+      }
+    });
+  }
+  pingback(pingbackurl)
+}
+
+</script>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+var pageTracker = _gat._getTracker("UA-6442723-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</script>
+<!--[if lt IE 7]>
+<style>
+#customize {position: absolute}
+.noticeable {position: absolute}
+</style>
+<![endif]-->
+</body>
+</html>
