@@ -54,7 +54,7 @@
   (cond
     (some #{"migrate" "rollback"} args)
     (do
-      (mount/start #'lumnew1.config/env)
+      (mount/start #'ndcljhttpd.config/env)
       (migrations/migrate args (env :database-url))
       (System/exit 0))
     :else
