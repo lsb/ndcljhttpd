@@ -31,7 +31,7 @@
   :git-dependencies [["https://github.com/lsb/ndclj.git"]]
   :min-lein-version "2.0.0"
 
-  :jvm-opts ["-server" "-Dconf=.lein-env"]
+  :jvm-opts ["-server" "-Dconf=.lein-env" "-Xmx256m"]
   :source-paths ["src/clj"]
   :resource-paths ["resources"]
 
