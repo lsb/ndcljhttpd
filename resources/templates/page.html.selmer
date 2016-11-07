@@ -236,15 +236,15 @@ body.clean-page .subpassage-line-text a:link { color: #000000 }
   </div>
   <div id="text"><div id="vocab-amount" class="v{% if slider_value > 3 %}10{% else %}{{ slider_value * slider_value }}{% endif %}"><div id="principal-parts" class="p{% if principal_parts %}true{% else %}false{% endif %}"><div id="text-notes" class="p{% if text_notes %}true{% else %}false{% endif %}"><div id="definition-language" class="{{ language }}">
   {% if blue_box %}
-  <div id="customized-box"><div id="login-status" class="unprintworthy">{{ login_string }}</div><div id="customize" style="display: none">
+  <div id="customized-box"><div id="login-status" class="unprintworthy">{% safe %}{{ login_string }}{% endsafe %}</div><div id="customize" style="display: none">
       <p id="vocab-slider-description" class="unprintworthy">Click any word in the text to see<br>all the words it could come from.<br><br>Click and drag to adjust vocab:</p><div id="vocab-slider" class="vocab-slider unprintworthy"><div id="vocab-handle" class="vocab-handle"></div></div><input type="range" id="native-vocab-slider" style="display:none" min="0" max="4" value="{{ slider_value }}"><br>
       <div class="unprintworthy">
 	<select id='lang-dropdown'>
-	  <option value="english"{% ifequal language "english" %} selected{% endif %}>English</option>
-	  <option value="german"{% ifequal language "german" %} selected{% endif %}>Deutsch</option>
-	  <option value="italian"{% ifequal language "italian" %} selected{% endif %}>Italiano</option>
-	  <option value="french"{% ifequal language "french" %} selected{% endif %}>Fran&ccedil;ais</option>
-	  <option value="spanish"{% ifequal language "spanish" %} select{% endif %}>Espa&ntilde;ol</option>
+	  <option value="english"{% ifequal language "english" %} selected{% endifequal %}>English</option>
+	  <option value="german"{% ifequal language "german" %} selected{% endifequal %}>Deutsch</option>
+	  <option value="italian"{% ifequal language "italian" %} selected{% endifequal %}>Italiano</option>
+	  <option value="french"{% ifequal language "french" %} selected{% endifequal %}>Fran&ccedil;ais</option>
+	  <option value="spanish"{% ifequal language "spanish" %} select{% endifequal %}>Espa&ntilde;ol</option>
 	</select>
       </div>
       <div class="unprintworthy"><input type='checkbox' id='word-root-xbox'/><label id="word-root-description" for="word-root-xbox">Show all principal parts</label></div>
@@ -257,8 +257,8 @@ body.clean-page .subpassage-line-text a:link { color: #000000 }
       </span>
       <span id="onfixing" style="display:none" class="unprintworthy"><br>&nbsp;<br>Click a word in the text, and you'll see<br>a checkmark next to each possible definition.<br><br>Click the check next to the best match.<br><br>If you accidentally click a wrong definition,<br>just reclick the right one, no problem.<br><br>Thanks for helping make texts better.</span><br>
     </div></div>
-  {% end %}
-{% safe %}{% text %}{% endsafe %}
+  {% endif %}
+{% safe %}{{ text }}{% endsafe %}
 
   </div></div></div></div></div>
 <p id='aufin'><br>&nbsp;<br><span onclick="alert(eval(prompt('repl')))">&copy;</span> 2008-2013 NoDictionaries.com.  Happy reading.</p>
