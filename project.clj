@@ -23,7 +23,7 @@
                  [org.clojure/tools.cli "0.3.4"]
                  [luminus-nrepl "0.1.4"]
                  [luminus-migrations "0.1.6"]
-                 [conman "0.5.7"]
+                 [conman "0.6.1"]
                  [org.xerial/sqlite-jdbc "3.8.11.2"]
                  [org.webjars/webjars-locator-jboss-vfs "0.1.0"]
                  [luminus-immutant "0.2.0"]]
