@@ -28,6 +28,7 @@
   (layout/render "about.html"))
 
 (defroutes home-routes
-  (GET "/" [] (home-page))
+  (GET "/homelol" [] (home-page))
+  (GET "/" [] (front-page))
   (GET "/about" [] (about-page)))
 
