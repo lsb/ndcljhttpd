@@ -19,3 +19,15 @@ WHERE id = :id
 -- :doc delete a user given the id
 DELETE FROM uusers
 WHERE id = :id
+
+
+-- :name first-subpassage-of-passage-in-book :? :*
+-- :doc get the first subpassage of a book's passage
+select subpassages.id from
+  subpassages, passages, books
+  where passage_id = passages.id
+    and book_id = books.id
+    and books.author = :bookauthor
+    and books.title = :booktitle
+    and passages.title = :passagetitle
+  order by subpassages.position limit 1
