@@ -1,7 +1,10 @@
 (ns ndcljhttpd.test.handler
   (:require [clojure.test :refer :all]
+            [mount.core]
             [ring.mock.request :refer :all]
             [ndcljhttpd.handler :refer :all]))
+
+(mount.core/start)
 
 (deftest test-app
   (testing "main route"
